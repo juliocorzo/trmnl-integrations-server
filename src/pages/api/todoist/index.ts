@@ -62,9 +62,9 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   const simplifiedProject1Tasks = parsedProject1Tasks.data.map(({
-    id, project_id, content, is_completed, priority, order, due,
+    id, project_id, content, is_completed, priority, order, due, description,
   }) => {
-    return { id, project_id, content, is_completed, priority, order, due };
+    return { id, project_id, content, is_completed, priority, order, due, description };
   });
 
   let project2Response;
@@ -101,9 +101,9 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   const simplifiedProject2Tasks = parsedProject2Tasks.data.map(({
-    id, project_id, content, is_completed, priority, order, due,
+    id, project_id, content, is_completed, priority, order, due, description,
   }) => {
-    return { id, project_id, content, is_completed, priority, order, due };
+    return { id, project_id, content, is_completed, priority, order, due, description, };
   });
 
   if (project1Response.ok && project2Response.ok) {
