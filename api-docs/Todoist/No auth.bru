@@ -1,0 +1,22 @@
+meta {
+  name: No auth
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base-url}}/todoist?project1=Work&project2=Personal
+  body: none
+  auth: none
+}
+
+params:query {
+  project1: Work
+  project2: Personal
+}
+
+body:json {
+  {
+    "filter": ["Work", "Personal"]
+  }
+}
